@@ -11,13 +11,16 @@ export default function CodeEditor() {
   useEffect(() => {
     const randomSnippet =
       codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
-    useStore.setState(randomSnippet);
+    useStore.setState({
+      language: randomSnippet.language,
+      code: randomSnippet.code,
+    });
   }, []);
 
   return (
     <Editor
       value={store.code}
-      onValueChange={(code) => useStore.setState({ code })}
+      onValueChange={(code) => useStore.setState({ code: code })}
       highlight={(code) =>
         hljs.highlight(code, { language: store.language }).value
       }

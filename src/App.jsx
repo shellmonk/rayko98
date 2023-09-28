@@ -11,10 +11,8 @@ function App() {
   const [width, setWidth] = useState("auto");
   const [showWidth, setShowWidth] = useState(false);
 
-  const theme = useStore((state) => state.theme);
   const padding = useStore((state) => state.padding);
   const fontStyle = useStore((state) => state.fontStyle);
-  const showBackground = useStore((state) => state.showBackground);
   const title = useStore((state) => state.title);
   const editorRef = useRef(null);
 
@@ -26,10 +24,7 @@ function App() {
     useStore.setState({
       ...state,
       code: state.code ? atob(state.code) : "",
-      autoDetectLanguage: state.autoDetectLanguage === "true",
-      darkMode: state.darkMode === "true",
       fontSize: Number(state.fontSize || 18),
-      fontStyle: state.fontStyle,
       padding: Number(state.padding || 64),
     });
   }, []);
