@@ -77,11 +77,15 @@ export default function ExportOptions({ targetRef }) {
   useHotkeys("shift+ctrl+s", () => saveImage(title, "SVG"));
 
   return (
-    <div>
-      <button onClick={copyImage}>Copy image</button>
-      <button onClick={copyLink}>Copy link</button>
-      <button onClick={() => saveImage(title, "PNG")}>Save as PNG</button>
-      <button onClick={() => saveImage(title, "PNG")}>Save as SVG</button>
+    <div className="field-row-stacked">
+      <button onClick={copyImage}>Copy image (CTRL+C)</button>
+      <button onClick={copyLink}>Copy link (SHIFT+CTRL+C)</button>
+      <button onClick={() => saveImage(title, "PNG")}>
+        Save as PNG (CTRL+S)
+      </button>
+      <button onClick={() => saveImage(title, "SVG")}>
+        Save as SVG (SHIFT+CTRL+S)
+      </button>
     </div>
   );
 }

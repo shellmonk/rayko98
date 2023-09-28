@@ -4,9 +4,9 @@ export default function PaddingSlider() {
   const padding = useStore((state) => state.padding);
 
   return (
-    <div>
-      <div className="field-row" style={{ width: "300px" }}>
-        <label>Padding:</label>
+    <div className="field-row-stacked">
+      <label style={{ marginRight: "10px" }}>Padding:</label>
+      <div className="field-row">
         <label>Low</label>
         <input
           id="range26"

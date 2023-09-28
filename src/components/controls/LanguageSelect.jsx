@@ -15,17 +15,12 @@ export default function LanguageSelect() {
     }
   };
   return (
-    <div>
-      <label className="block mb-2 text-xs font-medium text-neutral-400">
-        Language
-      </label>
-      <select value={language} onChange={handleChange}>
-        {Object.entries(languages).map(([lang, name]) => (
-          <option key={lang} value={lang}>
-            {name}
-          </option>
-        ))}
-      </select>
-    </div>
+    <select value={language} onChange={handleChange} style={{ width: "100%" }}>
+      {Object.entries(languages).map(([lang, name]) => (
+        <option key={lang} value={lang}>
+          {name}
+        </option>
+      ))}
+    </select>
   );
 }

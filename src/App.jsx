@@ -87,16 +87,7 @@ function App() {
           )}
         </div>
       </div>
-      <div
-        style={{
-          position: "fixed",
-          bottom: 0,
-          maxWidth: "inherit",
-          width: "80%",
-        }}
-      >
-        <ControlPanel />
-      </div>
+      <ControlPanel targetRef={editorRef} />
     </main>
   );
 }
