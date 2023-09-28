@@ -1,8 +1,7 @@
+import { codeSnippets, fonts } from "@/options";
 import useStore from "@/store";
 import { useEffect } from "react";
-import { codeSnippets, fonts } from "@/options";
 import Editor from "react-simple-code-editor";
-import flourite from "flourite";
 import hljs from "highlight.js";
 import "highlight.js/styles/default.css";
 
@@ -14,15 +13,6 @@ export default function CodeEditor() {
       codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
     useStore.setState(randomSnippet);
   }, []);
-
-  useEffect(() => {
-    if (store.autoDetectLanguage) {
-      const { language } = flourite(store.code, { noUnknown: true });
-      useStore.setState({
-        language: language.toLowerCase() || "plaintext",
-      });
-    }
-  }, [store.autoDetectLanguage, store.code]);
 
   return (
     <Editor

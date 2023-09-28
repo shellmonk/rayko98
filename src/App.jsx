@@ -9,7 +9,6 @@ import "98.css";
 
 function App() {
   const [width, setWidth] = useState("auto");
-  const [height, setHeight] = useState("auto");
   const [showWidth, setShowWidth] = useState(false);
 
   const theme = useStore((state) => state.theme);

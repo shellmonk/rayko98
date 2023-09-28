@@ -1,10 +1,8 @@
-import { languages, themes } from "@/options";
+import { languages } from "@/options";
 import useStore from "@/store";
-import { codeSnippets } from "../../options";
 
 export default function LanguageSelect() {
   const language = useStore((state) => state.language);
-  const autoDetectLanguage = useStore((state) => state.autoDetectLanguage);
 
   const handleChange = (event) => {
     let lang = event.target.value;

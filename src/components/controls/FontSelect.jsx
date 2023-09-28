@@ -9,7 +9,6 @@ export default function FontSelect() {
       style={{ width: "100%", marginBottom: "10px" }}
       value={fontStyle}
       onChange={(event) => {
-        console.log(event.target.value);
         useStore.setState({ fontStyle: event.target.value });
       }}
     >
