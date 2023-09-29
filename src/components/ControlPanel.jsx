@@ -28,6 +28,14 @@ export default function ControlPanel({ targetRef }) {
         </fieldset>
 
         <ExportOptions targetRef={targetRef} />
+        <fieldset>
+          <legend>Go To</legend>
+          <button style={{ width: "100%" }}>
+            <a target="_blank" href="https://github.com/shellmonk/rayko98">
+              Rayko98's GitHub
+            </a>
+          </button>
+        </fieldset>
       </div>
     </div>
   );
