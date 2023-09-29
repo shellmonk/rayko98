@@ -15,7 +15,6 @@ export default function PaddingSlider() {
           max="200"
           value={padding}
           onChange={(event) => {
-            console.log(event.target.value);
             useStore.setState({ padding: Number(event.target.value) });
           }}
         />
