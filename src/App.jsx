@@ -71,7 +71,11 @@ function App() {
               </div>
 
               <div className="status-bar">
-                <p className="status-bar-field">https://rayko.shellmonk.io</p>
+                <p className="status-bar-field">
+                  <a href="https://rayko.shellmonk.io" target="_blank">
+                    https://rayko.shellmonk.io
+                  </a>
+                </p>
                 <p className="status-bar-field">{languages[lang]}</p>
                 <p className="status-bar-field">CPU Usage: 69%</p>
               </div>
