@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { fonts } from "./options";
+import { fonts, languages } from "./options";
 import useStore from "./store";
 import { Resizable } from "re-resizable";
 import CodeEditor from "./components/CodeEditor";
@@ -14,6 +14,7 @@ function App() {
   const padding = useStore((state) => state.padding);
   const fontStyle = useStore((state) => state.fontStyle);
   const title = useStore((state) => state.title);
+  const lang = useStore((state) => state.language);
   const editorRef = useRef(null);
 
   useEffect(() => {
@@ -71,7 +72,7 @@ function App() {
 
               <div className="status-bar">
                 <p className="status-bar-field">https://rayko.shellmonk.io</p>
-                <p className="status-bar-field">Slide 420</p>
+                <p className="status-bar-field">{languages[lang]}</p>
                 <p className="status-bar-field">CPU Usage: 69%</p>
               </div>
             </div>
